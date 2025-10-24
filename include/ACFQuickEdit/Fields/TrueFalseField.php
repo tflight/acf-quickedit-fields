@@ -31,7 +31,7 @@ class TrueFalseField extends Field {
 		$choices = $this->get_choices();
 		$value = get_field( $this->acf_field['key'], $object_id, false );
 
-		if ( is_string( $value ) ) {
+		if ( is_string( $value ) && ! empty( $value ) ) {
 			return $choices[ $value ];
 		}
 
