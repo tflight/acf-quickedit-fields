@@ -56,7 +56,7 @@ trait BulkOperationNumeric {
 			$value = min( $this->acf_field['max'], $value );
 		}
 		if ( $this->acf_field['step'] ) {
-			$value = round( $value / $this->acf_field['step'] ) * $this->acf_field['step'];
+			$value = round( (float) $value / $this->acf_field['step'] ) * $this->acf_field['step'];
 		}
 		return $value;
 	}
